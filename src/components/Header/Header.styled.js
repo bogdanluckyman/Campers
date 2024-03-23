@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-import colors from '../../styles/colors';
 import { NavLink } from 'react-router-dom';
 
 export const Box = styled.div`
   height: 60px;
-  background-color: ${colors.grey};
-  color: ${colors.black};
+  background-color: var(--grey);
+  color: var(--text-color);
   padding: 20px;
   text-align: center;
 `;
@@ -16,11 +15,11 @@ export const BoxNav = styled.nav`
 
 export const StyledLink = styled(NavLink)`
   text-decoration: none;
-  color: ${colors.black};
+  color: var(--text-color);
   margin-left: 20px;
   font-size: 20px;
 
   &.active {
-    color: ${colors.red};
+    color: var(--red-hover);
   }
 `;
