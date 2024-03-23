@@ -13,7 +13,7 @@ const Home = () => {
         <li>
           <Box>
             <p></p>
-            <img src="/images/secondVan.jpg" alt="Second van" />
+            <img src="/images/secondVan.png" alt="Second van" />
           </Box>
         </li>
         <li>
