@@ -6,19 +6,19 @@ const Home = () => {
       <ul>
         <li>
           <Box>
-            <img src="/images/van.jpg" alt="First van" />
+            <img src="/public/images/van-min.jpg" alt="First van" />
             <p></p>
           </Box>
         </li>
         <li>
           <Box>
             <p></p>
-            <img src="/images/secondVan.png" alt="Second van" />
+            <img src="/public/images/secondVan-min.jpg" alt="Second van" />
           </Box>
         </li>
         <li>
           <Box>
-            <img src="/images/thirdVan.jpg" alt="Third van" />
+            <img src="/public/images/thirdVan-min.jpg" alt="Third van" />
             <p></p>
           </Box>
         </li>
