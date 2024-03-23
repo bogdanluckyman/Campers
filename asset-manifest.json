@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Campers/static/css/main.7acaea2f.css",
+    "main.js": "/Campers/static/js/main.07d3183d.js",
+    "index.html": "/Campers/index.html",
+    "main.7acaea2f.css.map": "/Campers/static/css/main.7acaea2f.css.map",
+    "main.07d3183d.js.map": "/Campers/static/js/main.07d3183d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.07d3183d.js"
+  ]
+}
