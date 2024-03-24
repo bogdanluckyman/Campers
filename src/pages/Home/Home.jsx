@@ -65,9 +65,7 @@ const Home = () => {
                 admire breathtaking landscapes or embark on impromptu hiking
                 expeditions. Family relationships deepen as you spend quality
                 time together, sharing meals, playing games, and marveling at
-                the wonders of nature. Whether it's a weekend getaway or an
-                extended road trip, RV travel creates unforgettable memories
-                that will last a lifetime.
+                the wonders of nature.
               </p>
             </Box>
           </CardContainer>
