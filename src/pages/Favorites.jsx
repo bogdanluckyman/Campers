@@ -1,14 +1,14 @@
-import { useSelector } from "react-redux";
-import { GrCatalog } from "react-icons/gr";
-import { selectFavorites } from "../redux/adverts/selectors";
-import { MainContainer } from "layouts/MainContainer";
-import AdvertCard from "components/AdvertCard";
+import { useSelector } from 'react-redux';
+import { GrCatalog } from 'react-icons/gr';
+import { selectFavorites } from '../redux/adverts/selectors';
+import { MainContainer } from 'layouts/MainContainer';
+import AdvertCard from 'components/AdvertCard/AdvertCard';
 import {
   AdvertsList,
   CardItem,
   GoToCatalogLink,
   NoItemsMsg,
-} from "components/AdvertCard/AdvertCard.styled";
+} from 'components/AdvertCard/AdvertCard.styled';
 
 const Favorites = () => {
   const favorites = useSelector(selectFavorites);
@@ -17,7 +17,7 @@ const Favorites = () => {
       <MainContainer>
         {favorites.length > 0 ? (
           <AdvertsList>
-            {favorites.map((fav) => (
+            {favorites.map(fav => (
               <CardItem key={fav._id}>
                 <AdvertCard card={fav} />
               </CardItem>

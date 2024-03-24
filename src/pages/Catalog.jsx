@@ -13,7 +13,7 @@ import { LIMIT } from 'constants';
 import { smoothScrollToTarget } from 'helpers';
 import { MainContainer } from 'layouts/MainContainer';
 import Loader from 'components/Loader';
-import AdvertCard from 'components/AdvertCard';
+import AdvertCard from 'components/AdvertCard/AdvertCard';
 import {
   AdvertsList,
   CardItem,
