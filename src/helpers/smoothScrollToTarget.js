@@ -1,6 +1,6 @@
-import { scroller } from "react-scroll";
+import { scroller } from 'react-scroll';
 
-const smoothScrollToTarget = (target) => {
+const smoothScrollToTarget = target => {
   if (!target) return;
   else
     setTimeout(
