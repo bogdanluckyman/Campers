@@ -1,9 +1,9 @@
-import { useState, useMemo } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { addToFavorites, removeFromFavorites } from "../../redux/adverts/slice";
-import { PiWind } from "react-icons/pi";
-import { selectFavorites } from "../../redux/adverts/selectors";
-import Modal from "components/Modal";
+import { useState, useMemo } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToFavorites, removeFromFavorites } from '../../redux/adverts/slice';
+import { PiWind } from 'react-icons/pi';
+import { selectFavorites } from '../../redux/adverts/selectors';
+import Modal from 'components/Modal/Modal';
 import {
   StarIcon,
   LocationIcon,
@@ -13,7 +13,7 @@ import {
   PetrolIcon,
   TransmissionIcon,
   FavIcon,
-} from "components/icons";
+} from 'components/icons';
 import {
   VanPic,
   MainInfoWrap,
@@ -28,18 +28,18 @@ import {
   DetailsList,
   ShowBtn,
   AddToFavBtn,
-} from "./AdvertCard.styled";
+} from './AdvertCard.styled';
 
 const AdvertCard = ({ card }) => {
   const [isModalShown, setIsModalShown] = useState(false);
-  const [activeTab, setActiveTab] = useState("features");
+  const [activeTab, setActiveTab] = useState('features');
   const [clickToReviews, setClickToReviews] = useState(false);
 
   const dispatch = useDispatch();
   const favorites = useSelector(selectFavorites);
 
   const isCardFavorite = useMemo(
-    () => favorites.find((fav) => fav._id === card._id),
+    () => favorites.find(fav => fav._id === card._id),
     [favorites, card._id]
   );
 
@@ -75,15 +75,15 @@ const AdvertCard = ({ card }) => {
             <StarIcon
               width={20}
               height={20}
-              fillColor={"var(--accent-orange)"}
+              fillColor={'var(--accent-orange)'}
             />
             <button
               type="button"
               aria-label="Open reviews"
               onClick={() => {
                 setIsModalShown(true);
-                document.body.style.overflow = "hidden";
-                setActiveTab("reviews");
+                document.body.style.overflow = 'hidden';
+                setActiveTab('reviews');
                 setClickToReviews(true);
               }}
             >
@@ -93,7 +93,7 @@ const AdvertCard = ({ card }) => {
 
           <LocationWrap>
             <LocationIcon width={20} height={20} />
-            <p>{card.location.split(",").reverse().join(", ")}</p>
+            <p>{card.location.split(',').reverse().join(', ')}</p>
           </LocationWrap>
         </RatingLocationWrap>
 
@@ -129,7 +129,7 @@ const AdvertCard = ({ card }) => {
 
           {card.airConditioner >= 1 && (
             <li>
-              <PiWind size={20} style={{ fill: "var(--text-color)" }} />
+              <PiWind size={20} style={{ fill: 'var(--text-color)' }} />
               AC
             </li>
           )}
@@ -140,7 +140,7 @@ const AdvertCard = ({ card }) => {
           aria-label="Show more details"
           onClick={() => {
             setIsModalShown(true);
-            document.body.style.overflow = "hidden";
+            document.body.style.overflow = 'hidden';
           }}
         >
           Show more

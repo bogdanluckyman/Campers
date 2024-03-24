@@ -3,8 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { ThemeProvider } from 'styled-components';
 import useTheme from 'hooks/useTheme';
-import GlobalStyles from 'assets/globalStyles';
 import SharedHeader from 'layouts/SharedHeader';
+import GlobalStyles from 'assets/globalStyles/GlobalStyles';
 
 const Home = lazy(() => import('pages/Home/Home'));
 const CatalogPage = lazy(() => import('pages/Catalog'));

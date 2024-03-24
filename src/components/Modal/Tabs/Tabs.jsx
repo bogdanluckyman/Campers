@@ -1,7 +1,8 @@
-import { TabsWrap, TabsList, RenderBlock } from "./Tabs.styled";
-import Features from "../Features";
-import BookForm from "../BookForm";
-import Reviews from "../Reviews";
+import { TabsWrap, TabsList, RenderBlock } from './Tabs.styled';
+import Features from '../Features/Features';
+
+import Reviews from '../Reviews/Reviews';
+import BookForm from '../BookForm/BookForm';
 
 const Tabs = ({ card, activeTab, setActiveTab }) => {
   return (
@@ -11,8 +12,8 @@ const Tabs = ({ card, activeTab, setActiveTab }) => {
           <button
             type="button"
             aria-label="Show features"
-            className={activeTab === "features" ? "active" : ""}
-            onClick={() => setActiveTab("features")}
+            className={activeTab === 'features' ? 'active' : ''}
+            onClick={() => setActiveTab('features')}
           >
             Features
           </button>
@@ -22,8 +23,8 @@ const Tabs = ({ card, activeTab, setActiveTab }) => {
           <button
             type="button"
             aria-label="Show reviews"
-            className={activeTab === "reviews" ? "active" : ""}
-            onClick={() => setActiveTab("reviews")}
+            className={activeTab === 'reviews' ? 'active' : ''}
+            onClick={() => setActiveTab('reviews')}
           >
             Reviews
           </button>
@@ -32,7 +33,7 @@ const Tabs = ({ card, activeTab, setActiveTab }) => {
 
       <hr />
 
-      {activeTab === "features" ? (
+      {activeTab === 'features' ? (
         <RenderBlock>
           <Features card={card} />
           <BookForm />

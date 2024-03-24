@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Box = styled.div`
-  height: 60px;
+  height: 70px;
   background-color: var(--grey);
   color: var(--text-color);
   padding: 20px;

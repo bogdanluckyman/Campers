@@ -1,20 +1,20 @@
-import { useDispatch } from "react-redux";
-import { Formik } from "formik";
-import toast from "react-hot-toast";
-import { bookVan } from "../../../redux/adverts/slice";
-import { formatDate } from "helpers";
-import bookVanSchema from "schemas";
-import { FORM_INIT_VALUES } from "constants";
-import Calendar from "./Calendar";
-import CalendarIcon from "components/icons/CalendarIcon";
+import { useDispatch } from 'react-redux';
+import { Formik } from 'formik';
+import toast from 'react-hot-toast';
+import { bookVan } from '../../../redux/adverts/slice';
+import { formatDate } from 'helpers';
+import bookVanSchema from 'schemas';
+import { FORM_INIT_VALUES } from 'constants';
+import Calendar from './Calendar/Calendar';
+import CalendarIcon from 'components/icons/CalendarIcon';
 import {
   ErrorMsg,
   Form,
   Label,
   SubmitBtn,
   TitleBlock,
-} from "./BookForm.styled";
-import { TOASTER_CONFIG } from "constants";
+} from './BookForm.styled';
+import { TOASTER_CONFIG } from 'constants';
 
 const BookForm = () => {
   const dispatch = useDispatch();
@@ -34,7 +34,7 @@ const BookForm = () => {
     }
 
     dispatch(bookVan(formData));
-    toast("Successfully sent!", TOASTER_CONFIG);
+    toast('Successfully sent!', TOASTER_CONFIG);
 
     setTimeout(() => window.location.reload(), 700);
   };
@@ -57,7 +57,7 @@ const BookForm = () => {
               type="text"
               name="name"
               placeholder="Name"
-              {...getFieldProps("name")}
+              {...getFieldProps('name')}
             />
             {errors.name && touched.name && <ErrorMsg>{errors.name}</ErrorMsg>}
           </Label>
@@ -67,7 +67,7 @@ const BookForm = () => {
               type="email"
               name="email"
               placeholder="Email"
-              {...getFieldProps("email")}
+              {...getFieldProps('email')}
             />
             {errors.email && touched.email && (
               <ErrorMsg>{errors.email}</ErrorMsg>
@@ -84,7 +84,7 @@ const BookForm = () => {
             <textarea
               name="comment"
               placeholder="Comment"
-              {...getFieldProps("comment")}
+              {...getFieldProps('comment')}
             />
             {errors.comment && touched.comment && (
               <ErrorMsg>{errors.comment}</ErrorMsg>

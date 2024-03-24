@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
-import { createPortal } from "react-dom";
-import { CloseIcon, LocationIcon, StarIcon } from "components/icons";
-import { MainContainer } from "layouts/MainContainer";
-import Tabs from "./Tabs";
+import React, { useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
+import { CloseIcon, LocationIcon, StarIcon } from 'components/icons';
+import { MainContainer } from 'layouts/MainContainer';
+import Tabs from './Tabs/Tabs';
 import {
   Backdrop,
   CLoseBtn,
@@ -11,14 +11,14 @@ import {
   ModalDescr,
   PicsList,
   Window,
-} from "./Modal.styled";
+} from './Modal.styled';
 import {
   LocationWrap,
   Price,
   RatingLocationWrap,
   RatingWrap,
   Title,
-} from "components/AdvertCard/AdvertCard.styled";
+} from 'components/AdvertCard/AdvertCard.styled';
 
 const Modal = ({
   card,
@@ -30,20 +30,20 @@ const Modal = ({
 }) => {
   const tabsRef = useRef();
   useEffect(() => {
-    const handleESCClose = (e) => {
-      if (e.code === "Escape") closeModal();
+    const handleESCClose = e => {
+      if (e.code === 'Escape') closeModal();
     };
 
-    window.addEventListener("keydown", handleESCClose);
+    window.addEventListener('keydown', handleESCClose);
 
-    return () => window.removeEventListener("keydown", handleESCClose);
+    return () => window.removeEventListener('keydown', handleESCClose);
   }, [closeModal]);
 
   useEffect(() => {
     clickToReviews &&
       tabsRef.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
+        behavior: 'smooth',
+        block: 'start',
         duration: 1000,
       });
   }, [clickToReviews]);
@@ -51,17 +51,17 @@ const Modal = ({
   const handleBackdropClose = ({ target, currentTarget }) => {
     if (target === currentTarget) {
       closeModal();
-      document.body.style.overflow = "visible";
+      document.body.style.overflow = 'visible';
     }
   };
 
   return createPortal(
     <Backdrop
-      className={isModalShown ? "is-shown" : "is-hidden"}
+      className={isModalShown ? 'is-shown' : 'is-hidden'}
       onClick={handleBackdropClose}
     >
       <MainContainer onClick={handleBackdropClose}>
-        <Window className={isModalShown ? "is-shown" : "is-hidden"}>
+        <Window className={isModalShown ? 'is-shown' : 'is-hidden'}>
           <CLoseBtn type="button" aria-label="Close modal" onClick={closeModal}>
             <CloseIcon width={20} height={20} />
           </CLoseBtn>
@@ -75,14 +75,14 @@ const Modal = ({
                   <StarIcon
                     width={20}
                     height={20}
-                    fillColor={"var(--accent-orange)"}
+                    fillColor={'var(--accent-orange)'}
                   />
                   <p>{`${card.rating}(${card.reviews.length} Reviews)`}</p>
                 </RatingWrap>
 
                 <LocationWrap>
                   <LocationIcon width={20} height={20} />
-                  <p>{card.location.split(",").reverse().join(", ")}</p>
+                  <p>{card.location.split(',').reverse().join(', ')}</p>
                 </LocationWrap>
               </RatingLocationWrap>
 
@@ -111,7 +111,7 @@ const Modal = ({
         </Window>
       </MainContainer>
     </Backdrop>,
-    document.getElementById("modal-root")
+    document.getElementById('modal-root')
   );
 };
 
